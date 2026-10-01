@@ -104,7 +104,13 @@ mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='
 .key i{flex:none;font-style:normal;font-size:22px;color:var(--acc)}
 .key span{font-family:var(--head);font-weight:700;font-size:30px;line-height:1;color:var(--ink)}.key.center{justify-content:center;text-align:center;max-width:640px;margin:22px auto 0}.brief section>.key{justify-content:center;text-align:center}
 .deliv{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);border:1px solid var(--line);border-radius:18px;overflow:hidden}
-.deliv div{background:var(--panel);padding:14px 16px 16px}.deliv div:last-child:nth-child(odd){grid-column:1/-1}
+.deliv div{background:var(--panel);padding:14px 16px 16px}.deliv div.w{grid-column:1/-1}
+.cards{margin-top:30px}.cards h3{font-size:34px;line-height:1;margin:4px 0 14px}
+.cardlist{display:grid;gap:14px}
+.acard{margin:0;border-radius:16px;overflow:hidden;border:1px solid var(--line);background:var(--panel)}
+.acard .zoom{display:block;width:100%;padding:0;border:0;background:#3a3a3a;cursor:zoom-in}.acard img{display:block;width:100%;height:auto}
+.acard figcaption{padding:8px 14px 10px;font-size:14px;color:var(--muted);border-top:1px solid var(--line)}
+.result{background:var(--bg)}.result .deliv{max-width:900px}.result .sub{margin-top:14px}
 .deliv dt{font-family:var(--head);font-weight:700;font-size:28px;line-height:1;color:var(--acc)}
 .deliv dd{font-size:17px;line-height:1.4;color:var(--ink-2);margin-top:6px}
 .brief .sub{margin-top:12px;font-size:15px}
@@ -264,11 +270,12 @@ footer a{color:var(--ink-2)}
 <main>
 <div class="sec brief"><div class="wrap cols">
 <section><div class="head"><span class="label">Що робимо</span><h2>Завдання</h2></div>
-<ol class="steps"><li><span class="n">1</span><span>Обери, що створюєш: <b>здобич</b> — скарб, який пірати хапають гумовими руками, або <b>предмет оточення</b>, що додає локації атмосфери.</span></li><li><span class="n">2</span><span>Додай геловінський твіст: гарбуз-скриня, проклятий ліхтар, череп із рубінами — або своє.</span></li><li><span class="n">3</span><span>Змоделюй асет, готовий до інтеграції в гру. <b>Полігонаж:</b> здобич — до ~5k tris, оточення — до ~10k.</span></li></ol></section>
+<ol class="steps"><li><span class="n">1</span><span>Обери, що створюєш: <b>здобич</b> — скарб, який пірати хапають гумовими руками, або <b>предмет оточення</b>, що додає локації атмосфери.</span></li><li><span class="n">2</span><span>Додай геловінський твіст: гарбуз-скриня, проклятий ліхтар, череп із рубінами — або своє.</span></li><li><span class="n">3</span><span>Змоделюй асет, готовий до інтеграції в гру: чиста сітка, розгортка й PBR-текстури.</span></li></ol></section>
 <section><div class="head"><span class="label">Фінал</span><h2>Що <span class="hl">надіслати</span></h2></div>
-<dl class="deliv"><div><dt>Рендер</dt><dd>фінальний вигляд асета + wireframe</dd></div><div><dt>UV</dt><dd>скриншот розгортки</dd></div><div><dt>Формат</dt><dd>JPEG / PNG</dd></div><div><dt>Якість</dt><dd>щоб було видно форму й текстури</dd></div></dl>
+<dl class="deliv"><div class="w"><dt>Картка асета</dt><dd>рендер у грі, сітка з кількістю трикутників і UV-розгортка — на одному аркуші, як у прикладах нижче</dd></div><div><dt>Формат</dt><dd>PNG або JPG, від 2000 px</dd></div><div><dt>Текстури</dt><dd>PBR, до 2048 px</dd></div><div><dt>Трикутники</dt><dd>як у нашій грі: малі асети до 800, середні до 3 000, великі до 6 500</dd></div><div><dt>Програма</dt><dd>будь-яка: Blender, Maya, 3ds Max, Substance</dd></div></dl>
 <div class="key"><i>✦</i><span>Головне — влучити в стиль і настрій гри</span><i>✦</i></div></section>
 </div>
+<div class="wrap cards"><span class="label">Приклад</span><h3>Так виглядає картка асета</h3><div class="cardlist"><figure class="acard"><button class="zoom" type="button" data-cap="Скриня · великий асет · 3 377 трикутників" aria-label="Збільшити: Скриня · великий асет · 3 377 трикутників"><img src="assets/cards/3d-chest-card.webp?v=ed349c74" alt="Скриня · великий асет · 3 377 трикутників" loading="lazy" decoding="async"></button><figcaption>Скриня · великий асет · 3 377 трикутників</figcaption></figure><figure class="acard"><button class="zoom" type="button" data-cap="Якір · великий асет · 3 088 трикутників" aria-label="Збільшити: Якір · великий асет · 3 088 трикутників"><img src="assets/cards/3d-anchor-card.webp?v=451060d8" alt="Якір · великий асет · 3 088 трикутників" loading="lazy" decoding="async"></button><figcaption>Якір · великий асет · 3 088 трикутників</figcaption></figure></div></div>
 </div>
 <section class="sec" style="padding-top:8px"><div class="wrap">
 <div class="head"><span class="label">Кухня студії</span><h2>Як це робимо <span class="hl">ми</span></h2><p class="sub">Реальні асети Last Pirates: модель → у грі.</p></div></div>
@@ -287,21 +294,21 @@ footer a{color:var(--ink-2)}
 <div class="head"><span class="label">Хто оцінює</span><h2>На що дивиться <span class="hl">ментор</span></h2></div>
 <div class="judge-grid">
 <div class="judge"><div class="photo"><img src="assets/img/judge-ostap.webp?v=7e60d140" alt="Остап Кутняк"></div><div class="who"><span class="dir">3D</span><h3>Остап Кутняк</h3><div class="role">ментор 3D-напряму</div></div><div class="bio"><p>Остап — 3D Lead у RetroStyle Games, з нами понад два роки. Має сильну академічну базу, працював над Last Pirates і добре знає, як поєднати красивий візуал із вимогами реального game production.</p><p class="pick">Переглядає всі роботи 3D‑напряму й обирає ту, що забере <b>$100</b>.</p></div></div>
-<ol class="crit" style="--cols:3"><li class="main"><i>I</i><span><b>Стиль і настрій</b> — асет виглядає як частина Last Pirates: форма, пропорції, матеріали.</span></li><li><i>II</i><span><b>Ідея</b> — геловінський твіст і зрозуміла роль у грі: здобич хочеться схопити, оточення додає атмосфери.</span></li><li><i>III</i><span><b>Виконання</b> — чиста модель, розгортка й текстури: асет можна взяти в гру.</span></li></ol>
+<ol class="crit" style="--cols:2"><li class="main"><i>I</i><span><b>Стиль і настрій</b> — асет виглядає як частина Last Pirates: форма, пропорції, матеріали.</span></li><li><i>II</i><span><b>Ідея</b> — геловінський твіст і зрозуміла роль у грі: здобич хочеться схопити, оточення додає атмосфери.</span></li><li><i>III</i><span><b>Виконання</b> — чиста модель, розгортка й текстури: асет можна взяти в гру.</span></li><li><i>IV</i><span><b>Подача</b> — виставлене світло, охайні ракурси, усі вимоги виконані.</span></li></ol>
 </div>
 <div class="ai"><div class="ic">AI — можна</div><p>І навіть вітається як інструмент. Але здаючи роботу, коротко напиши, які інструменти й на яких етапах допомагали. Чиста генерація без твоєї роботи не приймається.</p></div>
 </div></section>
 <section class="parch"><div class="torn top"></div><div class="wrap">
 <div class="head"><span class="label">Здача</span><h2>Як здати</h2></div>
 <div class="pcols"><ol class="psteps">
-<li><span>У боті натисни <b>«📤 Здати роботу»</b>.</span></li>
+<li><span>У боті натисни <b>«Здати роботу»</b>.</span></li>
 <li><span><b>Файл до 20 МБ</b> — надішли прямо в чат, саме як файл, а не як фото. Кілька файлів — одним архівом.</span></li>
 <li><span><b>Понад 20 МБ</b> — надішли посилання на Google Drive чи іншу хмару з доступом за посиланням.</span></li>
 <li><span>Додай коментар: що це за робота й чи був AI.</span></li>
 </ol>
 <div class="pside"><div class="due"><svg viewBox="0 0 64 64" aria-hidden="true"><use href="#pumpkin"/></svg><span>Дедлайн<br><em>27.10, 18:00</em> <small>за Києвом</small></span></div>
 <p class="note">27–29.10 ментори оцінюють роботи, 30.10 — підсумки.</p>
-<p class="note">Є питання — пиши в боті: «📡 Зв'язок з капітаном».</p>
+<p class="note">Є питання — тисни в боті «Зв'язок з капітаном» 🦜</p>
 <div class="ctas left"><a class="btn" href="https://t.me/rsg_contest_bot?start=tz_3d" target="_blank" rel="noopener" data-app-close>Назад до бота</a></div>
 </div></div></div><div class="torn bottom"></div></section>
 <section class="sec rules-sec"><div class="wrap">
@@ -314,6 +321,7 @@ footer a{color:var(--ink-2)}
 <li class="wide"><span>Роботу можна вільно додати до свого портфоліо 🎨</span></li>
 </ul>
 </div></section>
+<section class="sec result"><div class="wrap"><div class="head"><span class="label">Підсумок</span><h2>Що чекаємо <span class="hl">в результаті</span></h2></div><dl class="deliv"><div class="w"><dt>Картка асета</dt><dd>рендер у грі, сітка з кількістю трикутників і UV-розгортка — на одному аркуші, як у прикладах вище</dd></div><div><dt>Формат</dt><dd>PNG або JPG, від 2000 px</dd></div><div><dt>Текстури</dt><dd>PBR, до 2048 px</dd></div><div><dt>Трикутники</dt><dd>як у нашій грі: малі асети до 800, середні до 3 000, великі до 6 500</dd></div><div><dt>Програма</dt><dd>будь-яка: Blender, Maya, 3ds Max, Substance</dd></div></dl><p class="sub">Усе — одним архівом або посиланням на Google Диск, через бот до 27.10, 18:00 за Києвом.</p></div></section>
 </main>
 <footer><div class="wrap"><span>Halloween Art Contest 2026 · © RetroStyle Games · Київ</span><span><a href="https://store.steampowered.com/app/4317790/Last_Pirates_Die_Together/" target="_blank" rel="noopener">Last Pirates у Steam</a></span></div></footer>
 <div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Перегляд"><button type="button" aria-label="Закрити">✕</button><div class="fr"><img alt=""></div><p></p></div>
