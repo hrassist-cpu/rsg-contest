@@ -127,6 +127,10 @@ mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='
 .ticks{display:grid;gap:10px;margin:18px 0 22px}
 .ticks li{display:flex;gap:12px;align-items:flex-start;padding:14px 16px;border-radius:14px;background:var(--panel);border:1px solid var(--line);color:var(--ink-2)}
 .ticks li::before{content:"✦";flex:none;color:var(--acc);font-size:15px;line-height:1.6}
+.gal-h{font-family:var(--head);font-weight:700;font-size:30px;line-height:1.05;margin:24px 0 12px;color:var(--ink)}
+.mgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+.mgrid .zoom{display:block;width:100%;aspect-ratio:1;padding:0;border:1px solid var(--line);border-radius:12px;overflow:hidden;background:#1d1d1d;cursor:zoom-in}
+.mgrid img{width:100%;height:100%;object-fit:contain}
 .play{font-family:var(--head);font-weight:700;font-size:28px;line-height:1.05;margin:0 0 14px;color:var(--ink)}
 
 /* curator */
@@ -193,6 +197,7 @@ footer a{color:var(--ink-2)}
   .ctas{flex-direction:row;flex-wrap:wrap;justify-content:center;max-width:none}
   .ctas.left{justify-content:flex-start}
   .clips{grid-template-columns:1fr 1fr;gap:14px}
+  .mgrid{grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
   .moon{width:110px;top:110px;right:10%}
   .brand .rsg{height:40px}.brand .lp{height:56px}
   .judge{grid-template-columns:190px 1fr;gap:22px;padding:22px 26px 22px 18px}
@@ -214,11 +219,11 @@ footer a{color:var(--ink-2)}
   .pcols{display:grid;grid-template-columns:1.25fr 1fr;gap:56px;align-items:center}
   .pside .due{margin-top:0}
   .hero .lead{max-width:680px}
-  .rules li.rights{grid-column:1/-1}
+  .rules li.rights,.rules li.wide{grid-column:1/-1}
   .m-only{display:none}.d-only{display:inline}
 }
 @media (max-width:959px){.brief .cols>section+section{margin-top:40px}}
-@media (hover:hover){.row .zoom:hover img{transform:scale(1.03)}.row img{transition:transform .35s var(--ease)}}
+@media (hover:hover){.row .zoom:hover img,.mgrid .zoom:hover img{transform:scale(1.03)}.row img,.mgrid img{transition:transform .35s var(--ease)}}
 @media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}.bats{display:none}}
 </style></head><body>
 <svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
@@ -233,21 +238,21 @@ footer a{color:var(--ink-2)}
 <div class="topbar"><div class="brand"><img class="rsg" src="assets/img/rsg-logo.webp?v=eedb67ad" alt="RetroStyle Games"><span class="x">×</span><img class="lp" src="assets/img/lp-logo.webp?v=616963d7" alt="Last Pirates: Die Together"></div><span class="doc">ТЗ · <b>3D</b></span></div>
 <span class="label">Halloween Art Contest</span>
 <h1><span class="a">Cursed</span> <span class="b">Loot</span></h1>
-<p class="lead">Створи хелловінський скарб або предмет оточення, <b>готовий до гри</b>.</p>
+<p class="lead">Створи геловінський скарб або предмет оточення, <b>готовий до гри</b>.</p>
 <dl class="facts">
 <div class="fact"><dt>напрям</dt><dd>3D<small>Cursed Loot</small></dd></div>
 <div class="fact"><dt>дедлайн</dt><dd>27.10, 18:00<small>за Києвом</small></dd></div>
 <div class="fact"><dt>куратор</dt><dd>Остап Кутняк</dd></div>
 <div class="fact"><dt>здача</dt><dd>через бот<small>@rsg_contest_bot</small></dd></div>
 </dl>
-<div class="ctas"><a class="btn pulse" href="https://store.steampowered.com/app/4317790/Last_Pirates_Die_Together/" target="_blank" rel="noopener">Last Pirates у Steam <span class="ar">↗</span></a><a class="ghost" href="https://store.steampowered.com/app/4530130/Last_Pirates_Die_Together_Demo/" target="_blank" rel="noopener">Безкоштовне демо <span class="ar">↗</span></a></div>
+<div class="ctas"><a class="btn pulse" href="https://store.steampowered.com/app/4317790/Last_Pirates_Die_Together/" target="_blank" rel="noopener">Last Pirates у Steam <span class="ar">↗</span></a></div>
 </div>
 <div class="torn bottom"></div>
 </header>
 <main>
 <div class="sec brief"><div class="wrap cols">
 <section><div class="head"><span class="label">Що робимо</span><h2>Завдання</h2></div>
-<ol class="steps"><li><span class="n">1</span><span>Обери, що створюєш: <b>здобич</b> — скарб, який пірати хапають гумовими руками, або <b>предмет оточення</b>, що додає локації атмосфери.</span></li><li><span class="n">2</span><span>Додай хелловінський твіст: гарбуз-скриня, проклятий ліхтар, череп із рубінами — або своє.</span></li><li><span class="n">3</span><span>Змоделюй асет так, щоб його можна було взяти в гру. <b>Полігонаж:</b> здобич — до ~5k tris, оточення — до ~10k.</span></li></ol>
+<ol class="steps"><li><span class="n">1</span><span>Обери, що створюєш: <b>здобич</b> — скарб, який пірати хапають гумовими руками, або <b>предмет оточення</b>, що додає локації атмосфери.</span></li><li><span class="n">2</span><span>Додай геловінський твіст: гарбуз-скриня, проклятий ліхтар, череп із рубінами — або своє.</span></li><li><span class="n">3</span><span>Змоделюй асет так, щоб його можна було взяти в гру. <b>Полігонаж:</b> здобич — до ~5k tris, оточення — до ~10k.</span></li></ol>
 <div class="key"><i>✦</i><span>Головне — влучити в стиль і настрій гри</span></div></section>
 <section><div class="head"><span class="label">Фінал</span><h2>Що <span class="hl">надіслати</span></h2></div>
 <dl class="deliv"><div><dt>Рендер</dt><dd>фінальний вигляд асета</dd></div><div><dt>UV</dt><dd>скриншот розгортки</dd></div><div><dt>Формат</dt><dd>JPEG / PNG</dd></div><div><dt>Якість</dt><dd>щоб було видно форму й текстури</dd></div></dl></section>
@@ -260,15 +265,16 @@ footer a{color:var(--ink-2)}
 <section class="sec style-sec"><div class="wrap">
 <div class="head"><span class="label">Світ гри</span><h2>Стиль <span class="hl">гри</span></h2><p class="sub">Робота має виглядати так, ніби вже живе в Last Pirates: Die Together.</p></div>
 <div class="clips"><figure class="clip"><video class="" data-src="assets/video/loop-stretch.mp4?v=95f8ae87" poster="assets/video/loop-stretch.webp?v=ea3694db" autoplay muted loop playsinline preload="none" aria-hidden="true"></video><figcaption class="cap">Разом за скарбом</figcaption></figure><figure class="clip"><video class="" data-src="assets/video/loop-grab.mp4?v=aa4415f4" poster="assets/video/loop-grab.webp?v=30700b10" autoplay muted loop playsinline preload="none" aria-hidden="true"></video><figcaption class="cap">Гумові руки</figcaption></figure><figure class="clip"><video class="" data-src="assets/video/loop-cage.mp4?v=0e7b2a2e" poster="assets/video/loop-cage.webp?v=d28ef17c" autoplay muted loop playsinline preload="none" aria-hidden="true"></video><figcaption class="cap">Пастки</figcaption></figure><figure class="clip"><video class="" data-src="assets/video/loop-fish.mp4?v=982e808b" poster="assets/video/loop-fish.webp?v=151a3a96" autoplay muted loop playsinline preload="none" aria-hidden="true"></video><figcaption class="cap">Прокляті локації</figcaption></figure></div>
+
 <ul class="ticks"><li><span><b>Матеріали</b> — потерте дерево, іржавий метал, латунь, скло, мотузки. Без глянцю й «пластику».</span></li><li><span><b>Світло</b> — холодна темрява й тепле світло ліхтарів: асет має читатися саме так.</span></li><li><span><b>Настрій</b> — хорор, у якому смішно.</span></li></ul>
 <div class="playbox"><p class="play">Найкраще відчути стиль — зазирнути в гру:</p>
-<div class="ctas left"><a class="btn" href="https://store.steampowered.com/app/4317790/Last_Pirates_Die_Together/" target="_blank" rel="noopener">Сторінка гри в Steam <span class="ar">↗</span></a><a class="ghost" href="https://store.steampowered.com/app/4530130/Last_Pirates_Die_Together_Demo/" target="_blank" rel="noopener">Пограти в демо <span class="ar">↗</span></a></div></div>
+<div class="ctas left"><a class="btn" href="https://store.steampowered.com/app/4317790/Last_Pirates_Die_Together/" target="_blank" rel="noopener">Сторінка гри в Steam <span class="ar">↗</span></a></div></div>
 </div></section>
 <section class="sec"><div class="wrap">
 <div class="head"><span class="label">Хто оцінює</span><h2>На що дивиться <span class="hl">куратор</span></h2></div>
 <div class="judge-grid">
 <div class="judge"><div class="photo"><img src="assets/img/judge-ostap.webp?v=7e60d140" alt="Остап Кутняк"></div><div><span class="dir">3D</span><h3>Остап Кутняк</h3><div class="role">куратор 3D<br>RetroStyle Games</div><p>Переглядає всі роботи 3D‑напряму й обирає ту, що забере $100.</p></div></div>
-<ol class="crit"><li class="main"><i>I</i><span><b>Стиль і настрій</b> — асет виглядає як частина Last Pirates: форма, пропорції, матеріали.</span></li><li><i>II</i><span><b>Ідея</b> — хелловінський твіст і зрозуміла роль у грі: здобич хочеться схопити, оточення додає атмосфери.</span></li><li><i>III</i><span><b>Виконання</b> — чиста модель, розгортка й текстури: асет можна взяти в гру.</span></li></ol>
+<ol class="crit"><li class="main"><i>I</i><span><b>Стиль і настрій</b> — асет виглядає як частина Last Pirates: форма, пропорції, матеріали.</span></li><li><i>II</i><span><b>Ідея</b> — геловінський твіст і зрозуміла роль у грі: здобич хочеться схопити, оточення додає атмосфери.</span></li><li><i>III</i><span><b>Виконання</b> — чиста модель, розгортка й текстури: асет можна взяти в гру.</span></li></ol>
 </div>
 <div class="ai"><div class="ic">AI — можна</div><p>І навіть вітається — як інструмент для ідей, референсів чи варіантів. Здаючи роботу, коротко напиши, які інструменти й на яких етапах допомагали. Чиста генерація без твоєї роботи не приймається.</p></div>
 </div></section>
@@ -291,7 +297,8 @@ footer a{color:var(--ink-2)}
 <li><span>Одна робота — в одному напрямі.</span></li>
 <li><span>Робота твоя й створена спеціально для конкурсу.</span></li>
 <li><span>Персональні дані — лише для конкурсу та зв'язку щодо працевлаштування.</span></li>
-<li class="rights"><span>Надсилаючи роботу на конкурс, ти передаєш RetroStyle Games право використовувати її з комерційною та медійною метою: у грі, на медіаресурсах, у статтях, соцмережах і промо.</span></li>
+<li class="rights"><span>Надсилаючи роботу на конкурс, ти передаєш RetroStyle Games право використовувати її з комерційною та медійною метою: у грі, на медіаресурсах, у статтях, соцмережах тощо.</span></li>
+<li class="wide"><span>Роботу можна вільно додати до свого портфоліо 🎨</span></li>
 </ul>
 </div></section>
 </main>

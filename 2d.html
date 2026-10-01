@@ -127,6 +127,10 @@ mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='
 .ticks{display:grid;gap:10px;margin:18px 0 22px}
 .ticks li{display:flex;gap:12px;align-items:flex-start;padding:14px 16px;border-radius:14px;background:var(--panel);border:1px solid var(--line);color:var(--ink-2)}
 .ticks li::before{content:"✦";flex:none;color:var(--acc);font-size:15px;line-height:1.6}
+.gal-h{font-family:var(--head);font-weight:700;font-size:30px;line-height:1.05;margin:24px 0 12px;color:var(--ink)}
+.mgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+.mgrid .zoom{display:block;width:100%;aspect-ratio:1;padding:0;border:1px solid var(--line);border-radius:12px;overflow:hidden;background:#1d1d1d;cursor:zoom-in}
+.mgrid img{width:100%;height:100%;object-fit:contain}
 .play{font-family:var(--head);font-weight:700;font-size:28px;line-height:1.05;margin:0 0 14px;color:var(--ink)}
 
 /* curator */
@@ -193,6 +197,7 @@ footer a{color:var(--ink-2)}
   .ctas{flex-direction:row;flex-wrap:wrap;justify-content:center;max-width:none}
   .ctas.left{justify-content:flex-start}
   .clips{grid-template-columns:1fr 1fr;gap:14px}
+  .mgrid{grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
   .moon{width:110px;top:110px;right:10%}
   .brand .rsg{height:40px}.brand .lp{height:56px}
   .judge{grid-template-columns:190px 1fr;gap:22px;padding:22px 26px 22px 18px}
@@ -214,11 +219,11 @@ footer a{color:var(--ink-2)}
   .pcols{display:grid;grid-template-columns:1.25fr 1fr;gap:56px;align-items:center}
   .pside .due{margin-top:0}
   .hero .lead{max-width:680px}
-  .rules li.rights{grid-column:1/-1}
+  .rules li.rights,.rules li.wide{grid-column:1/-1}
   .m-only{display:none}.d-only{display:inline}
 }
 @media (max-width:959px){.brief .cols>section+section{margin-top:40px}}
-@media (hover:hover){.row .zoom:hover img{transform:scale(1.03)}.row img{transition:transform .35s var(--ease)}}
+@media (hover:hover){.row .zoom:hover img,.mgrid .zoom:hover img{transform:scale(1.03)}.row img,.mgrid img{transition:transform .35s var(--ease)}}
 @media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}.bats{display:none}}
 </style></head><body>
 <svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
@@ -233,14 +238,14 @@ footer a{color:var(--ink-2)}
 <div class="topbar"><div class="brand"><img class="rsg" src="assets/img/rsg-logo.webp?v=eedb67ad" alt="RetroStyle Games"><span class="x">×</span><img class="lp" src="assets/img/lp-logo.webp?v=616963d7" alt="Last Pirates: Die Together"></div><span class="doc">ТЗ · <b>2D</b></span></div>
 <span class="label">Halloween Art Contest</span>
 <h1><span class="a">Cursed</span> <span class="b">Creatures</span></h1>
-<p class="lead">Вигадай хелловінського монстра, який полює на піратів: <b>концепт і рендер</b>.</p>
+<p class="lead">Вигадай геловінського монстра, який полює на піратів: <b>концепт і рендер</b>.</p>
 <dl class="facts">
 <div class="fact"><dt>напрям</dt><dd>2D<small>Cursed Creatures</small></dd></div>
 <div class="fact"><dt>дедлайн</dt><dd>27.10, 18:00<small>за Києвом</small></dd></div>
 <div class="fact"><dt>кураторка</dt><dd>Ірина Савінова</dd></div>
 <div class="fact"><dt>здача</dt><dd>через бот<small>@rsg_contest_bot</small></dd></div>
 </dl>
-<div class="ctas"><a class="btn green pulse" href="https://store.steampowered.com/app/4317790/Last_Pirates_Die_Together/" target="_blank" rel="noopener">Last Pirates у Steam <span class="ar">↗</span></a><a class="ghost" href="https://store.steampowered.com/app/4530130/Last_Pirates_Die_Together_Demo/" target="_blank" rel="noopener">Безкоштовне демо <span class="ar">↗</span></a></div>
+<div class="ctas"><a class="btn green pulse" href="https://store.steampowered.com/app/4317790/Last_Pirates_Die_Together/" target="_blank" rel="noopener">Last Pirates у Steam <span class="ar">↗</span></a></div>
 </div>
 <div class="torn bottom"></div>
 </header>
@@ -260,9 +265,10 @@ footer a{color:var(--ink-2)}
 <section class="sec style-sec"><div class="wrap">
 <div class="head"><span class="label">Світ гри</span><h2>Стиль <span class="hl">гри</span></h2><p class="sub">Робота має виглядати так, ніби вже живе в Last Pirates: Die Together.</p></div>
 <div class="clips"><figure class="clip"><video class="" data-src="assets/video/loop-spider.mp4?v=f8f69988" poster="assets/video/loop-spider.webp?v=d6c3a133" autoplay muted loop playsinline preload="none" aria-hidden="true"></video><figcaption class="cap">Монстри</figcaption></figure><figure class="clip"><video class="" data-src="assets/video/loop-fish.mp4?v=982e808b" poster="assets/video/loop-fish.webp?v=151a3a96" autoplay muted loop playsinline preload="none" aria-hidden="true"></video><figcaption class="cap">Прокляті локації</figcaption></figure><figure class="clip"><video class="" data-src="assets/video/loop-grab.mp4?v=aa4415f4" poster="assets/video/loop-grab.webp?v=30700b10" autoplay muted loop playsinline preload="none" aria-hidden="true"></video><figcaption class="cap">Гумові руки</figcaption></figure><figure class="clip"><video class="" data-src="assets/video/loop-chef.mp4?v=1367d67d" poster="assets/video/loop-chef.webp?v=5ea08d2e" autoplay muted loop playsinline preload="none" aria-hidden="true"></video><figcaption class="cap">Команда</figcaption></figure></div>
+<h3 class="gal-h">Монстри гри</h3><div class="mgrid"><button class="zoom" type="button" data-cap="Монстри гри" aria-label="Збільшити: Монстри гри"><img src="assets/monsters/monster-1.webp?v=be0c2ea8" alt="Монстри гри" loading="lazy" decoding="async"></button><button class="zoom" type="button" data-cap="Монстри гри" aria-label="Збільшити: Монстри гри"><img src="assets/monsters/monster-2.webp?v=29e1c57d" alt="Монстри гри" loading="lazy" decoding="async"></button><button class="zoom" type="button" data-cap="Монстри гри" aria-label="Збільшити: Монстри гри"><img src="assets/monsters/monster-3.webp?v=7cdfd7ea" alt="Монстри гри" loading="lazy" decoding="async"></button><button class="zoom" type="button" data-cap="Монстри гри" aria-label="Збільшити: Монстри гри"><img src="assets/monsters/monster-4.webp?v=03faef88" alt="Монстри гри" loading="lazy" decoding="async"></button><button class="zoom" type="button" data-cap="Монстри гри" aria-label="Збільшити: Монстри гри"><img src="assets/monsters/monster-5.webp?v=02df13d3" alt="Монстри гри" loading="lazy" decoding="async"></button><button class="zoom" type="button" data-cap="Монстри гри" aria-label="Збільшити: Монстри гри"><img src="assets/monsters/monster-6.webp?v=7dfc269c" alt="Монстри гри" loading="lazy" decoding="async"></button></div><p class="hint"><span class="m-only">Торкнись картинки, щоб збільшити.</span><span class="d-only">Натисни на картинку, щоб збільшити.</span></p>
 <ul class="ticks"><li><span><b>Пірати</b> — прості м'які форми й чисті яскраві кольори. <b>Монстри</b> — на контрасті: витягнуті пропорції, реалістичніші матеріали.</span></li><li><span><b>Світло</b> — холодна темрява й тепле світло ліхтарів.</span></li><li><span><b>Настрій</b> — хорор, у якому смішно.</span></li></ul>
 <div class="playbox"><p class="play">Найкраще відчути стиль — зазирнути в гру:</p>
-<div class="ctas left"><a class="btn green" href="https://store.steampowered.com/app/4317790/Last_Pirates_Die_Together/" target="_blank" rel="noopener">Сторінка гри в Steam <span class="ar">↗</span></a><a class="ghost" href="https://store.steampowered.com/app/4530130/Last_Pirates_Die_Together_Demo/" target="_blank" rel="noopener">Пограти в демо <span class="ar">↗</span></a></div></div>
+<div class="ctas left"><a class="btn green" href="https://store.steampowered.com/app/4317790/Last_Pirates_Die_Together/" target="_blank" rel="noopener">Сторінка гри в Steam <span class="ar">↗</span></a></div></div>
 </div></section>
 <section class="sec"><div class="wrap">
 <div class="head"><span class="label">Хто оцінює</span><h2>На що дивиться <span class="hl">кураторка</span></h2></div>
@@ -291,7 +297,8 @@ footer a{color:var(--ink-2)}
 <li><span>Одна робота — в одному напрямі.</span></li>
 <li><span>Робота твоя й створена спеціально для конкурсу.</span></li>
 <li><span>Персональні дані — лише для конкурсу та зв'язку щодо працевлаштування.</span></li>
-<li class="rights"><span>Надсилаючи роботу на конкурс, ти передаєш RetroStyle Games право використовувати її з комерційною та медійною метою: у грі, на медіаресурсах, у статтях, соцмережах і промо.</span></li>
+<li class="rights"><span>Надсилаючи роботу на конкурс, ти передаєш RetroStyle Games право використовувати її з комерційною та медійною метою: у грі, на медіаресурсах, у статтях, соцмережах тощо.</span></li>
+<li class="wide"><span>Роботу можна вільно додати до свого портфоліо 🎨</span></li>
 </ul>
 </div></section>
 </main>
